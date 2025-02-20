@@ -52,7 +52,7 @@ mkdir -p /app/t25
 chmod -R 777 /app
 
 cd /app/t25
-#git pull
+git clone https://github.com/aquaforge/T25.git
 cd /
 
 
@@ -61,3 +61,10 @@ python3 -m venv /app/t25/venv
 source /app/t25/venv/bin/activate
 pip install -r requirements.txt
 deactivate
+
+
+#service
+cp /app/t25/sctipts/t25.service /usr/lib/systemd/system
+systemctl daemon-reload
+systemctl enable t25.service
+systemctl start t25.service

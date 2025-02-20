@@ -1,12 +1,3 @@
-# copy file to /usr/lib/systemd/system
-# systemctl daemon-reload
-# systemctl enable t25.service
-
-# systemctl start t25.service
-# systemctl stop t25.service
-# systemctl status t25.service
-
-
 [Unit]
 Description=t25
 After=multi-user.target
