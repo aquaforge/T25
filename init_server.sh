@@ -5,6 +5,18 @@ echo "Incorrect number of arguments"
 exit 1
 fi
 
+#swap
+cd /
+fallocate -l 3G /swapfile
+# ls -lh /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+# swapon --show
+# free -h
+# top
+
+
 apt update 
 apt upgrade -y
 apt install -y python3-pip python3-venv mysql-server net-tools git ufw
