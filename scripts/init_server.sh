@@ -64,7 +64,7 @@ deactivate
 
 
 #service
-cp /app/t25/sctipts/t25.service /usr/lib/systemd/system
+cp /app/t25/scripts/t25.service /usr/lib/systemd/system
 systemctl daemon-reload
 systemctl enable t25.service
 systemctl start t25.service
