@@ -1,0 +1,22 @@
+# copy file to /usr/lib/systemd/system
+# systemctl daemon-reload
+# systemctl enable t25.service
+
+# systemctl start t25.service
+# systemctl stop t25.service
+# systemctl status t25.service
+
+
+[Unit]
+Description=t25-bot
+After=multi-user.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+Restart=always
+ExecStart=/app/t25/venv/bin/python3 /app/t25/main.py
+
+[Install]
+WantedBy=multi-user.target
