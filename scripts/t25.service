@@ -8,7 +8,7 @@
 
 
 [Unit]
-Description=t25-bot
+Description=t25
 After=multi-user.target
 
 [Service]
